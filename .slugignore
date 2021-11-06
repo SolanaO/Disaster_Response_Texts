@@ -2,6 +2,7 @@
 
 /data/DisasterResponseOpt.db
 /models/xgb_model.pkl
+/models/ada_model.pkl
 /notebooks
 /reports
 README.md
