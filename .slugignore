@@ -1,0 +1,8 @@
+# To be removed from uploading on Heroku
+
+/data/DisasterResponseOpt.db
+/models/xgb_model.pkl
+/notebooks
+/reports
+README.md
+LICENSE
