@@ -27,16 +27,12 @@ from sklearn.feature_extraction.text import (
 
 # machine learning packages
 from sklearn.pipeline import Pipeline
-
-#from xgboost import XGBClassifier
 from sklearn.multioutput import MultiOutputClassifier
-#from sklearn.ensemble import RandomForestClassifier
 from sklearn.ensemble import AdaBoostClassifier
-from sklearn.tree import DecisionTreeClassifier
+
 
 from sklearn.model_selection import (
     train_test_split,
-    #RandomizedSearchCV,
     GridSearchCV,
 )
 
@@ -140,16 +136,11 @@ def build_model():
     ])
 
     parameters = {
-    #'vect__max_df': (0.5, 0.75, 1.0),
     'vect__min_df': [5],
     'vect__max_features': [None],
     'clf__estimator__n_estimators': [50],
-    #'vect__ngram_range': ((1, 1)),  # unigrams or bigrams
-    #'tfidf__use_idf': (True, False),
-    #'tfidf__smooth_idf': [True, False],
-    #'tfidf__norm': ('l1', 'l2'),
-    #'clf__n_estimators': [50],
-    #'clf__min_samples_split': [2],
+    'clf__estimator__base_estimator': [None],
+    'clf__estimator__learning_rate': [0.1, 1.0],
 }
 
     scorer = make_scorer(f1_score, average='micro')
