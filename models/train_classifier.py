@@ -130,8 +130,6 @@ def build_model():
     #('tokenizer', Tokenizer()),
     ('vect', CountVectorizer(tokenizer=tokenize)),
     ('tfidf', TfidfTransformer()),
-    #('clf', MultiOutputClassifier(XGBClassifier(eval_metric='logloss',
-                                                #use_label_encoder=False))),
     ('clf', MultiOutputClassifier(AdaBoostClassifier())),
     ])
 
