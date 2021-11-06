@@ -23,11 +23,6 @@ from plotly.graph_objs import (
     Scatter,
 )
 
-from sklearn.base import (
-    BaseEstimator,
-    TransformerMixin,
-)
-
 from sqlalchemy import create_engine
 
 # import the module to create the graphs
@@ -101,7 +96,10 @@ def index():
     # sort the entries by frequency
     df_counts.sort_values(by='freqs', ascending=False)
 
-     # TODO: Below is an example - modify to create your own visuals
+    # drop the extra columns
+    df.drop(columns=['message_length', 'label_count'], inplace=True)
+
+     # visualizations
     graphs = [
         # graph 1: pie
         {
@@ -255,11 +253,3 @@ def go():
         query=query,
         classification_result=classification_results
     )
-
-# uncomment when running locally with python distress.py
-#def main():
-    #app.run(host='0.0.0.0', port=3001, debug=True)
-
-
-#if __name__ == '__main__':
-    #main()
