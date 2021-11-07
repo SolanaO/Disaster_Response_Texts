@@ -1,9 +1,11 @@
+# disaster_pipe
+Disaster pipeline and web app.
+proj2_dsnd
+==============================
 
-# Disaster Response Pipeline and Web App
 
-#### https://distresapp.herokuapp.com/
 
-Project Files Structure
+Project Structure
 ------------
 
     ├── LICENSE
@@ -176,7 +178,7 @@ There are several challenges when building the Heroku app:
 Run the following commands in the project's root directory:
 
 - run ETL pipeline that cleans data and creates the database  
-`python data/process_py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db`
+`python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db`
 
 - run ML pipeline that processes text and creates the model  
 `python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl`
@@ -186,4 +188,4 @@ Run the following commands in the project's root directory:
 
 ## Acknowledgments
 
-Thanks to [Udacity](udacity.com) for suggesting the problem and to **Figure Eight** for providing the data.
+Thanks to [Udacity](udacity.com) for suggesting the problem and to Figure Eight for providing the data.
