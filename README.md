@@ -1,6 +1,4 @@
-# disaster_pipe
-Disaster pipeline and web app.
-proj2_dsnd
+# Disaster pipeline and web app
 ==============================
 
 
