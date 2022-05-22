@@ -3,6 +3,8 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+dsnd_proj2_auxFiles/
+
 # C extensions
 *.so
 
