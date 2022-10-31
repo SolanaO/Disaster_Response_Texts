@@ -1,7 +1,7 @@
-# Disaster pipeline and web app
+# Disaster Response Pipeline and Web App
 ===========================================
 
-### [Web App with Flask and Heroku](https://distresapp.herokuapp.com/)
+## [Web App with Flask and Heroku](https://distresapp.herokuapp.com/)
 ============================================
 
 
@@ -90,7 +90,7 @@ together with the corresponding labels (given in _disaster_categories.csv_). The
 The primary goal of this analysis is to automatically characterize a message given to an API. In order to achieve this goal we plan to use:
 
 - text processing techniques (from NLTK library) such as tokenization and lemmatization,
-- use a Random Forest Classifier with default settings as a benchmark model,
+- a Random Forest Classifier with default settings as a benchmark model,
 - employ an AdaBoost Classifier wrapped in a MultiOutput Classifier with hyperparameters tunned via a Grid Search with Cross Validation,
 - create a web app with Flask which includes relevant visuals of the data built with Plotly,
 - deploy the web app on the Heroku platform.
